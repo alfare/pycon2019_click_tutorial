@@ -8,16 +8,19 @@ import time
 def cli():
     """Examples."""
 
+
 @cli.command()
 def editor():
     """Launch an editor."""
     message = click.edit("Prepopulated text")
     click.echo("Your message: {}".format(message))
 
+
 @cli.command(name="find-app-dir")
 def find_app_dir():
     """Find the appropriate application data folder."""
     click.echo(click.get_app_dir('part05'))
+
 
 @cli.command()
 def launch():
